@@ -13,9 +13,9 @@ from keras.models import Sequential
 from keras.layers import Embedding
 from keras.layers import LSTM
 from starlette.responses import HTMLResponse 
-from tensorflow.keras.preprocessing.text import Tokenizer
-from tensorflow.keras.preprocessing.sequence import pad_sequences
-from tensorflow.keras.layers import SpatialDropout1D, Dense
+from keras.preprocessing.text import Tokenizer
+from keras.preprocessing.sequence import pad_sequences
+from keras.layers import SpatialDropout1D, Dense
 import tensorflow as tf
 import re
 
