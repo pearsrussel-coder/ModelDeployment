@@ -42,14 +42,14 @@ Y = pd.get_dummies(data['sentiment']).values
 
 X_train, X_test, Y_train, Y_test = train_test_split(X,Y, test_size = 0.20)
 
-embed_dim = 128
-lstm_out = 196
+embed_dim = 64
+lstm_out = 98
 
 model = Sequential()
 model.add(Embedding(max_fatures, embed_dim,input_length = X.shape[1]))
 model.add(SpatialDropout1D(0.4))
 model.add(LSTM(lstm_out, dropout=0.3, recurrent_dropout=0.2, return_sequences=True))
-model.add(LSTM(128,recurrent_dropout=0.2))
+model.add(LSTM(64,recurrent_dropout=0.2))
 model.add(Dense(3,activation='softmax'))
 
 model.compile(loss = 'categorical_crossentropy', optimizer='adam',metrics = ['accuracy'])
