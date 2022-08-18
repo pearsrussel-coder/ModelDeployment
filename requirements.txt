@@ -2,7 +2,7 @@ sklearn
 fastapi
 pandas
 pydantic
-tensorflow==2.0.0
+tensorflow==1.8.0
 uvicorn
-h5py==3.6.0
+h5py==3.6.5
 python-multipart
