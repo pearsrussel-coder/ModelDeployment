@@ -16,6 +16,7 @@ from starlette.responses import HTMLResponse
 from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from tensorflow.keras.layers import SpatialDropout1D, Dense
+import tensorflow as tf
 import re
 
 def preProcess_data(text): #cleaning the data
