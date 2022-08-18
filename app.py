@@ -22,14 +22,12 @@ def take_inp():
         <input maxlength="28" name="text" type="text" value="Text Emotion to be tested" />
         <input type="submit" />'''
 
-# =============================================================================
-# @app.get('/predict', response_class=HTMLResponse) #data input by forms
-# def take_inp():
-#     return '''<form method="post"> 
-#     <input type="text" maxlength="28" name="text" value="Text Emotion to be tested"/>  
-#     <input type="submit"/> 
-#     </form>'''
-# =============================================================================
+@app.get('/predict', response_class=HTMLResponse) #data input by forms
+def take_inp():
+    return '''<form method="post"> 
+    <input type="text" maxlength="28" name="text" value="Text Emotion to be tested"/>  
+    <input type="submit"/> 
+    </form>'''
 
         
 data = pd.read_csv('Sentiment.csv')
