@@ -31,7 +31,7 @@ data = pd.read_csv('Sentiment.csv')
 # Keeping only the neccessary columns
 data = data[['text','sentiment']]
 
-max_fatures = 2000
+max_fatures = 1000
 
 tokenizer = Tokenizer(num_words=max_fatures, split=' ')
 tokenizer.fit_on_texts(data['text'].values)
